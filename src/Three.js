@@ -17,7 +17,7 @@ export default function Three() {
 
     const textureLoader = new THREE.TextureLoader();
     const matcapTexture = textureLoader.load(
-      "https://bruno-simon.com/prismic/matcaps/3.png"
+      "https://static.vecteezy.com/system/resources/previews/023/802/064/non_2x/rose-gold-metallic-gradient-with-scratches-rose-gold-foil-surface-texture-effect-illustration-vector.jpg"
     );
 
     const geometry = new THREE.TorusKnotGeometry(0.5, 0.2, 200, 30);
