@@ -13,8 +13,13 @@ export default function Three() {
     camera.position.z = 3;
     scene.add(camera);
 
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+    const textureLoader = new THREE.TextureLoader();
+    const matcapTexture = textureLoader.load(
+      "https://bruno-simon.com/prismic/matcaps/3.png"
+    );
+
+    const geometry = new THREE.TorusKnotGeometry(0.5, 0.2, 200, 30);
+    const material = new THREE.MeshMatcapMaterial({ matcap: matcapTexture });
     const mesh = new THREE.Mesh(geometry, material);
     mesh.rotation.y = 0.5;
     scene.add(mesh);
@@ -26,6 +31,8 @@ export default function Three() {
       window.requestAnimationFrame(animate);
 
       mesh.rotation.y += 0.01;
+      mesh.rotation.x += 0.01;
+
       renderer.render(scene, camera);
     };
 
