@@ -21,7 +21,15 @@ export default function Three() {
 
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.render(scene, camera);
+
+    const animate = function () {
+      window.requestAnimationFrame(animate);
+
+      mesh.rotation.y += 0.01;
+      renderer.render(scene, camera);
+    };
+
+    animate();
 
     document.body.appendChild(renderer.domElement);
   }, []);
