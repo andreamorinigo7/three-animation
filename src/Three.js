@@ -17,7 +17,7 @@ export default function Three() {
 
     const textureLoader = new THREE.TextureLoader();
     const matcapTexture = textureLoader.load(
-      "https://static.vecteezy.com/system/resources/previews/023/802/064/non_2x/rose-gold-metallic-gradient-with-scratches-rose-gold-foil-surface-texture-effect-illustration-vector.jpg"
+      "https://static.wixstatic.com/media/a9b834_1730a6c76e26424d9b4eb51403f6f82e~mv2.jpg/v1/fill/w_250,h_250,fp_0.50_0.50,q_30,blur_30,enc_auto/a9b834_1730a6c76e26424d9b4eb51403f6f82e~mv2.webp"
     );
 
     const geometry = new THREE.TorusKnotGeometry(0.5, 0.2, 200, 30);
